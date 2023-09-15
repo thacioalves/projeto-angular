@@ -1,1 +1,53 @@
-<p>cadastro works!</p>
+<div class="container">
+  <div class="centered-div">
+    <form class="example-form">
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Primeiro Nome</mat-label>
+              <input matInput />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Segundo Nome</mat-label>
+              <input matInput />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+
+      <p>
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <textarea matInput></textarea>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Senha</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+      </p>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Telefones</mat-label>
+          <span matPrefix>+55 &nbsp;</span>
+          <input type="tel" matInput placeholder="" />
+          <mat-icon matSuffix>mode_edit</mat-icon>
+        </mat-form-field>
+      </form>
+    </form>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Confirmar</button>
+    </mat-card-actions>
+  </div>
+</div>

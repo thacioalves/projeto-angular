@@ -1,0 +1,31 @@
+.toolbar{
+  background-color: #DF96C6;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.link-navbar{
+  margin: 0 4px 0 0;
+  text-decoration: none;
+}
+.link-navbar:active, .link-navbar:visited, .link-navbar:link{
+  color: rgba(0, 0, 0 , 0.87);
+}
+
+.link-navbar::after{
+  content: "/";
+  display: inline-block;
+  color: white;
+  margin: 0 4px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.encerrar-sessao::after{
+  display: none;
+  background: black;
+}
+
+

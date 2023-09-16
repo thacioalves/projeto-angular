@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./cadastro.component.css']
 })
 export class CadastroComponent {
- hide = true;
+  hide = true;
 }

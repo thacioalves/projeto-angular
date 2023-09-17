@@ -1,50 +1,52 @@
-<div class="container">
-  <div class="centered-div">
-    <h2>Administração</h2>
-    <form class="example-form">
-      <mat-form-field class="example-full-width">
-        <mat-label>Usuário</mat-label>
-        <input matInput />
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <mat-label>Nome</mat-label>
-        <input matInput />
-      </mat-form-field>
-
-      <p>
-        <mat-form-field class="example-full-width">
-          <mat-label>CPF</mat-label>
-          <input matInput />
-        </mat-form-field>
-        <mat-form-field class="example-full-width">
-          <mat-label>Email</mat-label>
-          <input matInput />
-        </mat-form-field>
-        <mat-form-field class="example-full-width">
-          <mat-label>Senha</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'" />
-          <button
-            mat-icon-button
-            matSuffix
-            (click)="hide = !hide"
-            [attr.aria-label]="'Hide password'"
-            [attr.aria-pressed]="hide"
-          >
-            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
-          </button>
-        </mat-form-field>
-      </p>
+<body>
+  <div class="container">
+    <div class="centered-div">
+      <h2>Administração</h2>
       <form class="example-form">
         <mat-form-field class="example-full-width">
-          <mat-label>Telefones</mat-label>
-          <span matPrefix>+55 &nbsp;</span>
-          <input type="tel" matInput placeholder="" />
-          <mat-icon matSuffix>mode_edit</mat-icon>
+          <mat-label>Usuário</mat-label>
+          <input matInput />
         </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Nome</mat-label>
+          <input matInput />
+        </mat-form-field>
+
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>CPF</mat-label>
+            <input matInput />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Senha</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+          </mat-form-field>
+        </p>
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Telefones</mat-label>
+            <span matPrefix>+55 &nbsp;</span>
+            <input type="tel" matInput placeholder="" />
+            <mat-icon matSuffix>mode_edit</mat-icon>
+          </mat-form-field>
+        </form>
       </form>
-    </form>
-    <mat-card-actions class="center-button">
-      <button mat-raised-button color="primary">Confirmar</button>
-    </mat-card-actions>
+      <mat-card-actions class="center-button">
+        <button mat-raised-button color="primary">Confirmar</button>
+      </mat-card-actions>
+    </div>
   </div>
-</div>
+</body>

@@ -1,5 +1,5 @@
 .toolbar{
-  background-color: #DF96C6;
+  background-color: #353535;
 }
 
 .example-spacer {
@@ -11,13 +11,13 @@
   text-decoration: none;
 }
 .link-navbar:active, .link-navbar:visited, .link-navbar:link{
-  color: rgba(0, 0, 0 , 0.87);
+  color: white;
 }
 
 .link-navbar::after{
   content: "/";
   display: inline-block;
-  color: white;
+  color: black;
   margin: 0 4px;
   text-align: center;
   font-size: 22px;
@@ -25,7 +25,7 @@
 
 .encerrar-sessao::after{
   display: none;
-  background: black;
+  background: white;
 }
 
 

@@ -25,12 +25,13 @@ td {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 2rem;
-  background-color: #DF96C6;
+  background-color: #353535;
 
 }
 
-.centered-div>h2{
+.centered-div>h2, h3{
   text-align: center;
+  color: white;
 }
 
 .center-button{

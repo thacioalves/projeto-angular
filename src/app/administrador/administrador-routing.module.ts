@@ -7,7 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 const routes: Routes = [
   { path: 'cadastro', component: CadastroComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'admin', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
 ];
 
 @NgModule({

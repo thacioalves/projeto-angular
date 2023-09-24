@@ -1,0 +1,38 @@
+.toolbar{
+  background-color: #353535;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.link-navbar{
+  margin: 0 4px 0 0;
+  text-decoration: none;
+}
+
+.link-navbar:active, .link-navbar:visited, .link-navbar:link{
+  color: white;
+}
+
+.link-navbar::after{
+  content: "/";
+  display: inline-block;
+  color: black;
+  margin: 0 4px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.encerrar-sessao::after{
+  display: none;
+  background: white;
+}
+
+.color{
+  color: white;
+}
+
+body{
+  background-color: #121212;
+}

@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { FooterComponent } from './components/footer/footer.component';
@@ -35,7 +36,8 @@ import { SharedRoutingModule } from './shared-routing.module';
     MatCardModule,
     MatToolbarModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatSidenavModule
   ],
   exports: [
     HeaderComponent,

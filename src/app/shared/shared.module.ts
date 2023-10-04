@@ -16,13 +16,15 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SharedRoutingModule } from './shared-routing.module';
+import { ContentComponent } from './components/content/content.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    ContentComponent
   ],
   imports: [
     CommonModule,

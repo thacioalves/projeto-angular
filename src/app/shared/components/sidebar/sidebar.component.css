@@ -1,4 +1,92 @@
-.container {
-  position: absolute;
-  background: #eee;
+:root {
+  --background-color-titulo: 353535;
+  --background-color-body: black;
+  --color-letra-titulo: white;
+  --color-letra: black;
+}
+
+.admin {
+  width: 280px;
+  flex-shrink: 0;
+  background-color: white;
+}
+
+.tituloAA {
+
+  height: 23px;
+  margin-left: 40px;
+}
+
+.tituloF {
+
+  height: 23px;
+  margin-left: 99px;
+}
+
+.tituloFor {
+
+  height: 23px;
+  margin-left: 75px;
+}
+
+.tituloV {
+
+  height: 23px;
+  margin-left: 80px;
+}
+
+
+.titulo-funcao-AA {
+  margin-right: 87px;
+}
+
+.titulo-funcao-F {
+  margin-right: 112px;
+}
+
+.titulo-funcao-For {
+  margin-right: 62px;
+}
+
+.titulo-funcao-V {
+  margin-right: 87px;
+}
+
+.redirecionador {
+
+  margin-right: 13px;
+}
+
+.titulo-geral {
+
+  color: white;
+  background-color: rgba(53, 53, 53, 1);
+}
+
+.titulo-funcao-adiministrador {
+  margin-right: 45px;
+}
+
+.faixa-preta {
+  background-color: black;
+}
+
+/*
+.boxdireita {
+  margin-top: -9.3%;
+  margin-left: 105%;
+  width: 30%;
+  height: 722px;
+  flex-shrink: 0;
+  color: black;
+  background-color: white;
+}
+*/
+.title {
+  text-align: center;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }

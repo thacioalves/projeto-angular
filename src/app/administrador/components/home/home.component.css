@@ -1,0 +1,139 @@
+.toolbar {
+  background-color: #353535;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.link-navbar {
+  margin: 0 4px 0 0;
+  text-decoration: none;
+}
+
+.link-navbar:active,
+.link-navbar:visited,
+.link-navbar:link {
+  color: white;
+}
+
+.link-navbar::after {
+  content: "/";
+  display: inline-block;
+  color: black;
+  margin: 0 4px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.encerrar-sessao::after {
+  display: none;
+  background: white;
+}
+
+.color {
+  color: white;
+}
+
+body {
+  background-color: #121212;
+}
+
+.caminho {
+  background-color: #505050;
+  padding: 4px;
+  padding-left: 16px;
+}
+
+:root {
+  --background-color-titulo: 353535;
+  --background-color-body: black;
+  --color-letra-titulo: white;
+  --color-letra: black;
+}
+
+.admin {
+  width: 280px;
+  flex-shrink: 0;
+  background-color: white;
+}
+
+.tituloAA {
+
+  height: 23px;
+  margin-left: 40px;
+}
+
+.tituloF {
+
+  height: 23px;
+  margin-left: 99px;
+}
+
+.tituloFor {
+
+  height: 23px;
+  margin-left: 75px;
+}
+
+.tituloV {
+
+  height: 23px;
+  margin-left: 80px;
+}
+
+
+.titulo-funcao-AA {
+  margin-right: 87px;
+}
+
+.titulo-funcao-F {
+  margin-right: 112px;
+}
+
+.titulo-funcao-For {
+  margin-right: 62px;
+}
+
+.titulo-funcao-V {
+  margin-right: 87px;
+}
+
+.redirecionador {
+
+  margin-right: 13px;
+}
+
+.titulo-geral {
+
+  color: white;
+  background-color: rgba(53, 53, 53, 1);
+}
+
+.titulo-funcao-adiministrador {
+  margin-right: 45px;
+}
+
+.faixa {
+  background-color: #121212;
+}
+
+/*
+.boxdireita {
+  margin-top: -9.3%;
+  margin-left: 105%;
+  width: 30%;
+  height: 722px;
+  flex-shrink: 0;
+  color: black;
+  background-color: white;
+}
+*/
+.title {
+  text-align: center;
+}
+
+.sidebar{
+  margin-top: 1.5%;
+  margin-left: 1%;
+}

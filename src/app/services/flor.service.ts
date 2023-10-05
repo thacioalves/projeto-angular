@@ -21,14 +21,16 @@ export class FlorService {
 
   save(flor: Flor): Observable<Flor> {
     const obj = {
-      nome: flor.nome,
+      corPetalas: flor.corPetalas,
+      alturaCaule: flor.alturaCaule
     };
     return this.http.post<Flor>(`${this.baseURL}/flores`, obj);
   }
 
   update(flor: Flor): Observable<Flor> {
     const obj = {
-      nome: flor.nome,
+      corPetalas: flor.corPetalas,
+      alturaCaule: flor.alturaCaule
     };
     return this.http.put<Flor>(`${this.baseURL}/flores/${flor.id}`, obj);
   }

@@ -10,27 +10,26 @@ import { FlorService } from 'src/app/services/flor.service';
   templateUrl: './flor-create.component.html',
   styleUrls: ['./flor-create.component.css']
 })
-export class FlorCreateComponent implements OnInit{
+export class FlorCreateComponent implements OnInit {
   formGroup: FormGroup;
   flores: Flor[] = [];
 
   constructor(private formBuilder: FormBuilder,
-              private fornecedorService: FornecedorService,
-              private florService: FlorService,
-              private router: Router,
-              private activatedRoute: ActivatedRoute) {
+    private fornecedorService: FornecedorService,
+    private florService: FlorService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute) {
 
-              this.formGroup = this.formBuilder.group({
-                id:[null],
-                nome:[ '', Validators.required],
-                estado: [null]
-              })
+    this.formGroup = this.formBuilder.group({
+      id: [null],
+      nome: ['', Validators.required],
+      estado: [null]
+    })
   }
 
   ngOnInit(): void {
-
     // buscando todos os estados para o select
-    this.florService.findAll(0, 27).subscribe(data => {
+    this.florService.findAll().subscribe(data => {
       this.flores = data;
       this.initializeForm();
     });
@@ -39,11 +38,11 @@ export class FlorCreateComponent implements OnInit{
     const flor: Flor = this.activatedRoute.snapshot.data['flor'];
 
     this.formGroup = this.formBuilder.group({
-      id:[(flor && flor.id) ? flor.id : null],
-      corPetalas:[(flor && flor.corPetalas) ? flor.corPetalas : '', Validators.required],
-      alturaCaule:[(flor && flor.alturaCaule) ? flor.alturaCaule : '', Validators.required],
-      fornecedor:[(flor && flor.corPetalas) ? flor.corPetalas : '', Validators.required],
-      flor:[flor]
+      id: [(flor && flor.id) ? flor.id : null],
+      corPetalas: [(flor && flor.corPetalas) ? flor.corPetalas : '', Validators.required],
+      alturaCaule: [(flor && flor.alturaCaule) ? flor.alturaCaule : '', Validators.required],
+      fornecedor: [(flor && flor.corPetalas) ? flor.corPetalas : '', Validators.required],
+      flor: [flor]
     })
     console.log(this.formGroup.value);
   }
@@ -86,5 +85,4 @@ export class FlorCreateComponent implements OnInit{
       });
     }
   }
-
 }

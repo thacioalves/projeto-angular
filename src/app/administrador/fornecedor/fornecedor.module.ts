@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { SharedModule } from 'src/app/shared/shared.module';
 
-import { FornecedorRoutingModule } from './fornecedor-routing.module';
 import { FornecedorCreateComponent } from './components/fornecedor-create/fornecedor-create.component';
-import { FornecedorUpdateComponent } from './components/fornecedor-update/fornecedor-update.component';
 import { FornecedorDeleteComponent } from './components/fornecedor-delete/fornecedor-delete.component';
+import { FornecedorUpdateComponent } from './components/fornecedor-update/fornecedor-update.component';
+import { FornecedorRoutingModule } from './fornecedor-routing.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FornecedorDeleteComponent } from './components/fornecedor-delete/fornec
   ],
   imports: [
     CommonModule,
-    FornecedorRoutingModule
+    FornecedorRoutingModule,
+    SharedModule
   ]
 })
 export class FornecedorModule { }

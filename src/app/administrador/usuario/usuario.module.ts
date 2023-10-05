@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { SharedModule } from 'src/app/shared/shared.module';
 
-import { UsuarioRoutingModule } from './usuario-routing.module';
-import { UsuarioUpdateComponent } from './components/usuario-update/usuario-update.component';
-import { UsuarioDeleteComponent } from './components/usuario-delete/usuario-delete.component';
 import { UsuarioCreateComponent } from './components/usuario-create/usuario-create.component';
+import { UsuarioDeleteComponent } from './components/usuario-delete/usuario-delete.component';
+import { UsuarioUpdateComponent } from './components/usuario-update/usuario-update.component';
+import { UsuarioRoutingModule } from './usuario-routing.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { UsuarioCreateComponent } from './components/usuario-create/usuario-crea
   ],
   imports: [
     CommonModule,
-    UsuarioRoutingModule
+    UsuarioRoutingModule,
+    SharedModule
   ]
 })
 export class UsuarioModule { }

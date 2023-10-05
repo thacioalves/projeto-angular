@@ -16,13 +16,19 @@ import { AdministradorRoutingModule } from './administrador-routing.module';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { DescontoComponent } from './components/desconto/desconto.component';
+import { EstoqueComponent } from './components/estoque/estoque.component';
+import { ProdutoComponent } from './components/produto/produto.component';
 
 
 @NgModule({
   declarations: [
     CadastroComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    DescontoComponent,
+    EstoqueComponent,
+    ProdutoComponent
   ],
   imports: [
     CommonModule,

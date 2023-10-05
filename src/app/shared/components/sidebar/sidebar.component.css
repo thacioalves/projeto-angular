@@ -1,12 +1,7 @@
-.tituloAA {
-  height: 23px;
-  margin-left:40px ;
-}
-
-.tituloF {
-
-  height: 23px;
-  margin-left:99px ;
+.titulo-geral {
+  text-align: center;
+  color: white;
+  background-color:#353535;
 }
 
 .tituloFor {
@@ -37,11 +32,7 @@
 
   margin-right: 13px;
 }
-.titulo-geral {
 
-  color: white;
-  background-color:rgba(53, 53, 53, 1) ;
-}
 .titulo-funcao-adiministrador {
   margin-right: 45px;
 }
@@ -54,4 +45,7 @@ mat-drawer-container {
   height: 80%;
   margin-left: 1%;
   margin-top: 1%;
+}
+.space{
+  margin-bottom: 22px;
 }

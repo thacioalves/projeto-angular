@@ -28,10 +28,31 @@ const routes: Routes = [
         (m) => m.UsuarioModule
       ),
   },
+  {
+    path: 'administrador/estoque',
+    loadChildren: () =>
+      import('./administrador/estoque/estoque.module').then(
+        (m) => m.EstoqueModule
+      ),
+  },
+  {
+    path: 'administrador/produto',
+    loadChildren: () =>
+      import('./administrador/produto/produto.module').then(
+        (m) => m.ProdutoModule
+      ),
+  },
+  {
+    path: 'administrador/desconto',
+    loadChildren: () =>
+      import('./administrador/desconto/desconto.module').then(
+        (m) => m.DescontoModule
+      ),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

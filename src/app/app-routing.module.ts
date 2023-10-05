@@ -9,6 +9,16 @@ const routes: Routes = [
         (m) => m.AdministradorModule
       ),
   },
+  {
+    path: 'administrador/flor',
+    loadChildren: () =>
+      import('./administrador/flor/flor.module').then((m) => m.FlorModule),
+  },
+  {
+    path: 'administrador/flor',
+    loadChildren: () =>
+      import('./administrador/flor/flor.module').then((m) => m.FlorModule),
+  },
 ];
 
 @NgModule({

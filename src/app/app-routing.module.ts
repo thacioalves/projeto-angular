@@ -15,9 +15,18 @@ const routes: Routes = [
       import('./administrador/flor/flor.module').then((m) => m.FlorModule),
   },
   {
-    path: 'administrador/flor',
+    path: 'administrador/fornecedor',
     loadChildren: () =>
-      import('./administrador/flor/flor.module').then((m) => m.FlorModule),
+      import('./administrador/fornecedor/fornecedor.module').then(
+        (m) => m.FornecedorModule
+      ),
+  },
+  {
+    path: 'administrador/usuario',
+    loadChildren: () =>
+      import('./administrador/usuario/usuario.module').then(
+        (m) => m.UsuarioModule
+      ),
   },
 ];
 

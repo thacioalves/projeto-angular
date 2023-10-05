@@ -28,7 +28,6 @@ export class FlorCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // buscando todos os estados para o select
     this.florService.findAll().subscribe(data => {
       this.flores = data;
       this.initializeForm();

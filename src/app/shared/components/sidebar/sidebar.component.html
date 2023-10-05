@@ -1,12 +1,11 @@
-<mat-drawer-container class="example-container">
+<mat-drawer-container>
   <mat-drawer mode="side" opened>
-    <body>
       <div class="admin">
-        <div class="AutentincaçãoAutorização">
-          <div class="titulo-geral">
-            <a class="tituloAA">Autentincação e Autorização </a>
-          </div>
-          <div>
+        <div>
+          <div class="AuthUser">
+            <div class="titulo-geral">
+              <a class="tituloAA">Autentincação e Autorização </a>
+            </div>
             <div class="butao">
               <a class="titulo-funcao-AA">Usuário</a>
               <a class="redirecionador" routerLink="">Adicionar</a>
@@ -17,9 +16,6 @@
             <a class="titulo-funcao-adiministrador">Administrador</a>
             <a class="redirecionador" routerLink="">Adicionar</a>
             <a class="redirecionador" routerLink="">Alterar</a>
-          </div>
-          <div class="faixa-preta">
-            <br />
           </div>
         </div>
         <div class="Flor">
@@ -33,9 +29,6 @@
               <a class="redirecionador" routerLink="">Alterar</a>
             </div>
           </div>
-          <div class="faixa-preta">
-            <br />
-          </div>
         </div>
         <div class="Fornecedor">
           <div class="titulo-geral">
@@ -47,9 +40,6 @@
               <a class="redirecionador" routerLink="">Adicionar</a>
               <a class="redirecionador" routerLink="">Alterar</a>
             </div>
-          </div>
-          <div class="faixa-preta">
-            <br />
           </div>
         </div>
         <div class="Vendas">
@@ -65,7 +55,6 @@
           </div>
         </div>
       </div>
-    </body>
   </mat-drawer>
   <mat-drawer-content>
     <router-outlet></router-outlet>

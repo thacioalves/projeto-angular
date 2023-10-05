@@ -1,17 +1,4 @@
-:root{
-  --background-color-titulo: 353535;
-  --background-color-body: black;
-  --color-letra-titulo:white;
-  --color-letra:black;
-}
-.admin {
-  width: 280px;
-  flex-shrink: 0;
-  background-color: white;
-}
-
 .tituloAA {
-
   height: 23px;
   margin-left:40px ;
 }
@@ -33,7 +20,6 @@
   height: 23px;
   margin-left:80px ;
 }
-
 
 .titulo-funcao-AA {
   margin-right: 87px;
@@ -60,11 +46,12 @@
   margin-right: 45px;
 }
 
-.faixa-preta{
-  background-color: black;
-}
-
 .title {
   text-align: center;
 }
 
+mat-drawer-container {
+  height: 80%;
+  margin-left: 1%;
+  margin-top: 1%;
+}

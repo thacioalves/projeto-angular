@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Flor } from 'src/app/models/flor';
 import { FornecedorService } from 'src/app/services/fornecedor.service';
+import { FlorService } from 'src/app/services/flor.service';
 
 @Component({
   selector: 'app-flor-create',
@@ -15,6 +16,7 @@ export class FlorCreateComponent implements OnInit{
 
   constructor(private formBuilder: FormBuilder,
               private fornecedorService: FornecedorService,
+              private florService: FlorService,
               private router: Router,
               private activatedRoute: ActivatedRoute) {
 
@@ -23,37 +25,35 @@ export class FlorCreateComponent implements OnInit{
                 nome:[ '', Validators.required],
                 estado: [null]
               })
-
   }
 
   ngOnInit(): void {
 
     // buscando todos os estados para o select
-    this.estadoService.findAll(0, 27).subscribe(data => {
-      this.estados = data;
+    this.florService.findAll(0, 27).subscribe(data => {
+      this.flores = data;
       this.initializeForm();
     });
   }
   initializeForm() {
-    const cidade: Cidade = this.activatedRoute.snapshot.data['cidade'];
-
-    // selectionando o estado
-    const estado = this.estados.find(estado => estado.id === (cidade?.estado?.id || null));
+    const flor: Flor = this.activatedRoute.snapshot.data['flor'];
 
     this.formGroup = this.formBuilder.group({
-      id:[(cidade && cidade.id) ? cidade.id : null],
-      nome:[(cidade && cidade.nome) ? cidade.nome : '', Validators.required],
-      estado:[estado]
+      id:[(flor && flor.id) ? flor.id : null],
+      corPetalas:[(flor && flor.corPetalas) ? flor.corPetalas : '', Validators.required],
+      alturaCaule:[(flor && flor.alturaCaule) ? flor.alturaCaule : '', Validators.required],
+      fornecedor:[(flor && flor.corPetalas) ? flor.corPetalas : '', Validators.required],
+      flor:[flor]
     })
     console.log(this.formGroup.value);
   }
 
   salvar() {
     if (this.formGroup.valid) {
-      const cidade = this.formGroup.value;
-      if (cidade.id == null) {
-        this.cidadeService.save(cidade).subscribe({
-          next: (cidadeCadastrado) => {
+      const flor = this.formGroup.value;
+      if (flor.id == null) {
+        this.florService.save(flor).subscribe({
+          next: (florCadastrado) => {
             this.router.navigateByUrl('/cidades/list');
           },
           error: (err) => {
@@ -61,9 +61,9 @@ export class FlorCreateComponent implements OnInit{
           }
         });
       } else {
-        this.cidadeService.update(cidade).subscribe({
-          next: (cidadeCadastrado) => {
-            this.router.navigateByUrl('/cidades/list');
+        this.florService.update(flor).subscribe({
+          next: (florCadastrado) => {
+            this.router.navigateByUrl('/flores/list');
           },
           error: (err) => {
             console.log('Erro ao alterar' + JSON.stringify(err));
@@ -74,11 +74,11 @@ export class FlorCreateComponent implements OnInit{
   }
 
   excluir() {
-    const cidade = this.formGroup.value;
-    if (cidade.id != null) {
-      this.cidadeService.delete(cidade).subscribe({
+    const flor = this.formGroup.value;
+    if (flor.id != null) {
+      this.florService.delete(flor).subscribe({
         next: (e) => {
-          this.router.navigateByUrl('/cidades/list');
+          this.router.navigateByUrl('/flores/list');
         },
         error: (err) => {
           console.log('Erro ao excluir' + JSON.stringify(err));

@@ -1,16 +1,14 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
-import { EstoqueRoutingModule } from './estoque-routing.module';
-import { EstoqueComponent } from './components/estoque/estoque.component';
-import { EstoqueUpdateComponent } from './components/estoque-update/estoque-update.component';
 import { EstoqueCreateComponent } from './components/estoque-create/estoque-create.component';
 import { EstoqueDeleteComponent } from './components/estoque-delete/estoque-delete.component';
+import { EstoqueUpdateComponent } from './components/estoque-update/estoque-update.component';
+import { EstoqueRoutingModule } from './estoque-routing.module';
 
 
 @NgModule({
   declarations: [
-    EstoqueComponent,
     EstoqueUpdateComponent,
     EstoqueCreateComponent,
     EstoqueDeleteComponent

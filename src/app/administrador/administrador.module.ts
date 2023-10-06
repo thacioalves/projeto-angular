@@ -16,19 +16,48 @@ import { AdministradorRoutingModule } from './administrador-routing.module';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { DescontoComponent } from './components/desconto/desconto.component';
-import { EstoqueComponent } from './components/estoque/estoque.component';
-import { ProdutoComponent } from './components/produto/produto.component';
-
+import { DescontoCreateComponent } from './desconto/components/desconto-create/desconto-create.component';
+import { DescontoDeleteComponent } from './desconto/components/desconto-delete/desconto-delete.component';
+import { DescontoUpdateComponent } from './desconto/components/desconto-update/desconto-update.component';
+import { EstoqueCreateComponent } from './estoque/components/estoque-create/estoque-create.component';
+import { EstoqueDeleteComponent } from './estoque/components/estoque-delete/estoque-delete.component';
+import { EstoqueUpdateComponent } from './estoque/components/estoque-update/estoque-update.component';
+import { FlorCreateComponent } from './flor/components/flor-create/flor-create.component';
+import { FlorDeleteComponent } from './flor/components/flor-delete/flor-delete.component';
+import { FlorUpdateComponent } from './flor/components/flor-update/flor-update.component';
+import { FornecedorCreateComponent } from './fornecedor/components/fornecedor-create/fornecedor-create.component';
+import { FornecedorDeleteComponent } from './fornecedor/components/fornecedor-delete/fornecedor-delete.component';
+import { FornecedorUpdateComponent } from './fornecedor/components/fornecedor-update/fornecedor-update.component';
+import { ProdutoCreateComponent } from './produto/components/produto-create/produto-create.component';
+import { ProdutoDeleteComponent } from './produto/components/produto-delete/produto-delete.component';
+import { ProdutoUpdateComponent } from './produto/components/produto-update/produto-update.component';
+import { UsuarioCreateComponent } from './usuario/components/usuario-create/usuario-create.component';
+import { UsuarioDeleteComponent } from './usuario/components/usuario-delete/usuario-delete.component';
+import { UsuarioUpdateComponent } from './usuario/components/usuario-update/usuario-update.component';
 
 @NgModule({
   declarations: [
     CadastroComponent,
     LoginComponent,
     HomeComponent,
-    DescontoComponent,
-    EstoqueComponent,
-    ProdutoComponent
+    ProdutoCreateComponent,
+    ProdutoDeleteComponent,
+    ProdutoUpdateComponent,
+    EstoqueCreateComponent,
+    EstoqueUpdateComponent,
+    EstoqueDeleteComponent,
+    DescontoCreateComponent,
+    DescontoUpdateComponent,
+    DescontoDeleteComponent,
+    FlorCreateComponent,
+    FlorDeleteComponent,
+    FlorUpdateComponent,
+    FornecedorCreateComponent,
+    FornecedorDeleteComponent,
+    FornecedorUpdateComponent,
+    UsuarioCreateComponent,
+    UsuarioDeleteComponent,
+    UsuarioUpdateComponent,
   ],
   imports: [
     CommonModule,
@@ -43,7 +72,7 @@ import { ProdutoComponent } from './components/produto/produto.component';
     MatToolbarModule,
     MatDividerModule,
     MatListModule,
-    SharedModule
-  ]
+    SharedModule,
+  ],
 })
-export class AdministradorModule { }
+export class AdministradorModule {}

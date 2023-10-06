@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Flor } from 'src/app/models/flor';
 import { FornecedorService } from 'src/app/services/fornecedor.service';
 import { FlorService } from 'src/app/services/flor.service';
+import { ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-flor-create',
@@ -83,5 +84,17 @@ export class FlorCreateComponent implements OnInit {
         }
       });
     }
+  }
+
+  @ViewChild('fileInput') fileInput: any;
+
+  selecionarArquivo() {
+    this.fileInput.nativeElement.click();
+  }
+
+  onFileSelected(event: any) {
+    const arquivo = event.target.files[0];
+    // Aqui você pode fazer o que quiser com o arquivo selecionado
+    console.log('Arquivo selecionado:', arquivo);
   }
 }

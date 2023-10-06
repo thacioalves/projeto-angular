@@ -5,49 +5,57 @@
     <div class="spaceLeft">
         <mat-card-content>
             <form [formGroup]="formGroup">
-              <div style="display: flex; flex-direction: column;">
-                <!-- Cor da Pétala -->
-                <div style="margin-bottom: 30px;">
-                  <mat-label for="flor_id">Cor da Pétala</mat-label>
-                  <input matInput type="text" formControlName="flor" id="flor_id"/>
-                  <mat-error *ngIf="formGroup.get('corPetalas') &&
+                <div style="display: flex; flex-direction: column;">
+                    <!-- Cor da Pétala -->
+                    <div class="containerInput" style="margin-bottom: 30px;">
+                        <mat-label for="flor_id">Cor da Pétala</mat-label>
+                        <input matInput type="text" formControlName="flor" id="flor_id" />
+                        <mat-error *ngIf="formGroup.get('corPetalas') &&
                       formGroup.get('corPetalas')?.invalid &&
                       formGroup.get('corPetalas')?.touched">
-                    Cor é obrigatória.
-                  </mat-error>
-                </div>
+                            Cor é obrigatória.
+                        </mat-error>
+                    </div>
 
-                <mat-divider></mat-divider>
-          
-                <!-- Altura do Caule -->
-                <div style="margin-bottom: 30px;">
-                  <mat-label for="flor_id">Altura do Caule</mat-label>
-                  <input matInput type="number" formControlName="alturaCaule" id="flor_id" />
-                  <mat-error *ngIf="formGroup.get('alturaCaule') &&
+                    <mat-divider></mat-divider>
+
+                    <!-- Altura do Caule -->
+                    <div class="containerInput" style="margin-bottom: 30px;">
+                        <mat-label for="flor_id">Altura do Caule</mat-label>
+                        <input matInput type="number" formControlName="alturaCaule" id="flor_id" />
+                        <mat-error *ngIf="formGroup.get('alturaCaule') &&
                       formGroup.get('alturaCaule')?.invalid &&
                       formGroup.get('alturaCaule')?.touched">
-                    Altura é obrigatória.
-                  </mat-error>
-                </div>
+                            Altura é obrigatória.
+                        </mat-error>
+                    </div>
 
-                <mat-divider></mat-divider>
-          
-                <!-- Fornecedor -->
-                <div style="margin-bottom: 30px;">
-                  <mat-label for="flor_id">Fornecedor</mat-label>
-                  <input matInput type="text" formControlName="fornecedor" id="flor_id" />
-                  <mat-error *ngIf="formGroup.get('fornecedor') &&
+                    <mat-divider></mat-divider>
+
+                    <!-- Fornecedor -->
+                    <div class="containerInput" style="margin-bottom: 30px;">
+                        <mat-label for="flor_id">Fornecedor</mat-label>
+                        <input matInput type="text" formControlName="fornecedor" id="flor_id" />
+                        <mat-error *ngIf="formGroup.get('fornecedor') &&
                     formGroup.get('fornecedor')?.invalid &&
                     formGroup.get('fornecedor')?.touched">
-                    Fornecedor é obrigatório.
-                  </mat-error>
-                </div>
+                            Fornecedor é obrigatório.
+                        </mat-error>
+                    </div>
 
-                <mat-divider></mat-divider>
-              </div>
+                    <mat-divider></mat-divider>
+
+                    <div>
+                        <button (click)="selecionarArquivo()">Adicionar Arquivo</button>
+                        <input type="file" (change)="onFileSelected($event)" #fileInput style="display: none;"
+                            accept="*">
+                    </div>
+
+
+                </div>
             </form>
-          </mat-card-content>
-          
+        </mat-card-content>
+
         <mat-card-actions>
             <button mat-raised-button color="primary" (click)="salvar()" [disabled]="formGroup.invalid">
                 Salvar

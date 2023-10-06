@@ -1,44 +1,28 @@
 .titulo-geral {
   text-align: center;
+  margin: 0 0 1px;
   color: white;
   background-color:#353535;
 }
 
-.tituloFor {
-
-  height: 23px;
-  margin-left:75px ;
-}
-
-.tituloV {
-
-  height: 23px;
-  margin-left:80px ;
-}
-
-.titulo-funcao-AA {
-  margin-right: 87px;
-}
-.titulo-funcao-F {
-  margin-right: 112px;
-}
-.titulo-funcao-For {
-  margin-right: 62px;
-}
-.titulo-funcao-V {
-  margin-right: 87px;
-}
-.redirecionador{
-
-  margin-right: 13px;
-}
-
-.titulo-funcao-adiministrador {
-  margin-right: 45px;
-}
-
-.title {
+.space {
   text-align: center;
+  color: #121212;
+  background-color: #121212;
+}
+
+.formatDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.redirecionador1{
+  margin-right: 20px;
+  margin-left: 50px;
+}
+.redirecionador2{
+  margin-right: 10px;
 }
 
 mat-drawer-container {
@@ -46,6 +30,7 @@ mat-drawer-container {
   margin-left: 1%;
   margin-top: 1%;
 }
-.space{
-  margin-bottom: 22px;
+
+.mat-body p, .mat-body-2 p, .mat-typography .mat-body p, .mat-typography .mat-body-2 p, .mat-typography p {
+  margin: 0 0 1px;
 }

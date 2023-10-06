@@ -17,11 +17,11 @@ mat-card-actions {
 
 /* para a div */
 .form-container {
-    padding: 2rem;
+    padding: 1rem;
 } 
 
 .centered-toolbar {
-    margin: 2%;
+    margin: 1%;
     display: flex;
     justify-content: center;
     font-size:x-large;

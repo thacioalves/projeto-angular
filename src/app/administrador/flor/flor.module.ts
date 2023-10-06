@@ -16,6 +16,7 @@ import { FlorCreateComponent } from './components/flor-create/flor-create.compon
 import { FlorDeleteComponent } from './components/flor-delete/flor-delete.component';
 import { FlorUpdateComponent } from './components/flor-update/flor-update.component';
 import { FlorRoutingModule } from './flor-routing.module';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { FlorRoutingModule } from './flor-routing.module';
     MatCardModule,
     MatIconModule,
     MatToolbarModule,
-    MatTableModule
+    MatTableModule,
+    MatListModule
   ]
 })
 export class FlorModule { }

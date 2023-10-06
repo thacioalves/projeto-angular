@@ -25,6 +25,7 @@ mat-card-actions {
     display: flex;
     justify-content: center;
     font-size:x-large;
+    color: white;
 }
 
 button[mat-raised-button] {
@@ -35,4 +36,28 @@ button[mat-raised-button] {
 button[mat-raised-button]:not(:last-child) {
     margin-right: 1rem;
     /* Adiciona margem à direita de todos os botões, exceto o último */
+}
+
+mat-label{
+    font-size: 25px;
+    color: white;
+    padding-right: 50px;
+}
+
+mat-divider{
+    background-color: #414141;
+    margin-bottom: 15px;
+}
+
+input{
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #121212;
+    color: white;
+    width: 40%;
+}
+
+.spaceLeft{
+    margin-left: 5%;
 }

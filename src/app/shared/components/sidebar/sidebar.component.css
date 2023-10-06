@@ -34,3 +34,7 @@ mat-drawer-container {
 .mat-body p, .mat-body-2 p, .mat-typography .mat-body p, .mat-typography .mat-body-2 p, .mat-typography p {
   margin: 0 0 1px;
 }
+
+mat-drawer-content{
+  background-color: #121212;
+}

@@ -1,0 +1,67 @@
+<div>
+    <div class="quadrado">
+        <form [formGroup]="formGroup">
+            <div style="display: flex; flex-direction: column;">
+                <!-- Nome Entregador -->
+                <div class="containerInput" style="margin-bottom: 30px;">
+                    <mat-label for="entregador_id">Nome Entregador</mat-label>
+                    <input class="nomeEntregador" matInput type="text" formControlName="flor" id="entregador_id" />
+                    <mat-error *ngIf="formGroup.get('nomeEntregador') &&
+                      formGroup.get('nomeEntregador')?.invalid &&
+                      formGroup.get('nomeEntregador')?.touched">
+                      Nome Entregador.
+                    </mat-error>
+                </div>
+
+                <mat-divider></mat-divider>
+
+                <!-- CNPJ -->
+                <div class="containerInput" style="margin-bottom: 30px;">
+                    <mat-label for="entregador_id">CNPJ</mat-label>
+                    <input class="CNPJ" matInput type="number" formControlName="CNPJ" id="entregador_id" />
+                    <mat-error *ngIf="formGroup.get('CNPJ') &&
+                      formGroup.get('CNPJ')?.invalid &&
+                      formGroup.get('CNPJ')?.touched">
+                      CNPJ é obrigatória.
+                    </mat-error>
+                </div>
+
+                <mat-divider></mat-divider>
+
+                <!-- Chave de Rastreio -->
+                <div class="containerInput" style="margin-bottom: 30px;">
+                    <mat-label for="entregador_id">Chave de Rastreio</mat-label>
+                    <input  matInput type="text" formControlName="chave de rastreio" id="entregador_id" />
+                    <mat-error *ngIf="formGroup.get('chave de rastreio') &&
+                    formGroup.get('chave de rastreio')?.invalid &&
+                    formGroup.get('chave de rastreio')?.touched">
+                        Chave de Rastreio é obrigatório.
+                    </mat-error>
+                </div>
+
+                <mat-divider></mat-divider>
+
+                <!-- IdProduto -->
+                <div class="containerInput" style="margin-bottom: 30px;">
+                    <mat-label for="entregador_id">IdProduto</mat-label>
+                    <input class="IdProduto" matInput type="text" formControlName="IdProduto" id="entregador_id" />
+                    <mat-error *ngIf="formGroup.get('IdProduto') &&
+                      formGroup.get('IdProduto')?.invalid &&
+                      formGroup.get('IdProduto')?.touched">
+                      IdProduto é obrigatória.
+                    </mat-error>
+                </div>
+
+                <div class="button">
+                    <div class="example-button-row">
+                        <button mat-raised-button color="primary">Finalizar</button>
+                    </div>
+                </div><br>
+
+
+            </div>
+        </form>
+
+    </div>
+
+</div>

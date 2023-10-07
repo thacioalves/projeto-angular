@@ -1,0 +1,32 @@
+<div>
+    <div class="quadrado">
+        <form [formGroup]="formGroup">
+            <div style="display: flex; flex-direction: column;">
+                
+
+                <!-- CNPJ -->
+                <div class="containerInput" style="margin-bottom: 30px;">
+                    <mat-label for="entregador_id">CNPJ</mat-label>
+                    <input class="CNPJ" matInput type="number" formControlName="CNPJ" id="entregador_id" />
+                    <mat-error *ngIf="formGroup.get('CNPJ') &&
+                      formGroup.get('CNPJ')?.invalid &&
+                      formGroup.get('CNPJ')?.touched">
+                      CNPJ é obrigatória.
+                    </mat-error>
+                </div>
+
+                <mat-divider></mat-divider>
+
+                <div class="button">
+                    <div class="example-button-row">
+                        <button mat-raised-button color="primary">Finalizar</button>
+                    </div>
+                </div><br>
+
+
+            </div>
+        </form>
+
+    </div>
+
+</div>

@@ -14,12 +14,15 @@ import { ViewChild } from '@angular/core';
 export class FlorCreateComponent implements OnInit {
   formGroup: FormGroup;
   flores: Flor[] = [];
+  pageSize = 2;
+  pagina = 0;
 
   constructor(private formBuilder: FormBuilder,
     private fornecedorService: FornecedorService,
     private florService: FlorService,
     private router: Router,
     private activatedRoute: ActivatedRoute) {
+
 
     this.formGroup = this.formBuilder.group({
       id: [null],

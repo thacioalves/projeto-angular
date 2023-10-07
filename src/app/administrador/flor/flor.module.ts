@@ -17,6 +17,7 @@ import { FlorDeleteComponent } from './components/flor-delete/flor-delete.compon
 import { FlorUpdateComponent } from './components/flor-update/flor-update.component';
 import { FlorRoutingModule } from './flor-routing.module';
 import {MatListModule} from '@angular/material/list';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import {MatListModule} from '@angular/material/list';
     MatIconModule,
     MatToolbarModule,
     MatTableModule,
-    MatListModule
+    MatListModule,
+    MatCheckboxModule
   ]
 })
 export class FlorModule { }

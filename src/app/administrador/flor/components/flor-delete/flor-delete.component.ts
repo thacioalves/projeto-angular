@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
+import { FormControl } from '@angular/forms';
+import { PageEvent } from '@angular/material/paginator';
+import { Flor } from 'src/app/models/flor';
+import { FlorService } from 'src/app/services/flor.service';
 
 @Component({
   selector: 'app-flor-delete',
@@ -9,6 +11,19 @@ import {MatButtonModule} from '@angular/material/button';
 
 })
 
-export class FlorDeleteComponent {}
+export class FlorDeleteComponent {
+  tableColumns: string[] = ['check-column', 'nome-column'];
+  flor: Flor[] = [];
+
+  constructor(private florService: FlorService) { }
+
+  ngOnInit(): void {
+    this.florService.findAll().subscribe(data => {
+      this.flor = data;
+    });
+  }
+
+  disableSelect = new FormControl(false);
+}
 
 

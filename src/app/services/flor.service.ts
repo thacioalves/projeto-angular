@@ -19,6 +19,14 @@ export class FlorService {
     return this.http.get<Flor>(`${this.baseURL}/flores/${id}`);
   }
 
+  findByNome(nome: string, pagina: number, tamanhoPagina: number): Observable<Flor[]> {
+    const params = {
+      page: pagina.toString(),
+      pageSize: tamanhoPagina.toString()
+    }
+    return this.http.get<Flor[]>(`${this.baseURL}/flores/search/${nome}`, {params});
+  }
+
   save(flor: Flor): Observable<Flor> {
     const obj = {
       corPetalas: flor.corPetalas,
@@ -38,4 +46,13 @@ export class FlorService {
   delete(flor: Flor): Observable<any> {
     return this.http.delete<Flor>(`${this.baseURL}/flores/${flor.id}`);
   }
+
+  count(): Observable<number> {
+    return this.http.get<number>(`${this.baseURL}/flores/count`);
+  }
+
+  countByNome(nome: string): Observable<number> {
+    return this.http.get<number>(`${this.baseURL}/flores/search/${nome}/count`);
+  }
+
 }

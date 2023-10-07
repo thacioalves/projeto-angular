@@ -1,3 +1,7 @@
+table {
+    width: 100%;
+}
+
 /* mat-form-field */
 .full-width-input {
     width: 100%;
@@ -12,19 +16,19 @@ mat-card {
 
 mat-card-actions {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 /* para a div */
 .form-container {
-    padding: 2rem;
-} 
+    padding: 1rem;
+}
 
 .centered-toolbar {
-    margin: 2%;
+    margin-left: 3%;
     display: flex;
-    justify-content: center;
-    font-size:x-large;
+    font-size: x-large;
+    color: white;
 }
 
 button[mat-raised-button] {
@@ -35,4 +39,47 @@ button[mat-raised-button] {
 button[mat-raised-button]:not(:last-child) {
     margin-right: 1rem;
     /* Adiciona margem à direita de todos os botões, exceto o último */
+}
+
+mat-label {
+    font-size: 25px;
+    color: white;
+    padding-right: 50px;
+}
+
+mat-divider {
+    background-color: #414141;
+    margin-bottom: 15px;
+}
+
+input {
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #121212;
+    color: white;
+    width: 70%;
+    margin-left: auto;
+}
+
+.spaceLeft {
+    margin-left: 2%;
+}
+
+.containerInput{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.leftColumn{
+    width: 98%;
+}
+
+.mat-elevation-z8{
+    background-color: #121212;
+}
+
+.textColor{
+    color: white;
 }

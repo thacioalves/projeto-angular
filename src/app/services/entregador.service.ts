@@ -7,7 +7,7 @@ import { Entregador } from '../models/entregador';
   providedIn: 'root',
 })
 export class entregadorService {
-  private baseURL: string = 'http://localhost:8080';
+  private baseURL: string = 'http://localhost:8080';           //tem que criar isso no beck
 
   constructor(private http: HttpClient) {}
 

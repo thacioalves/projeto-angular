@@ -9,11 +9,26 @@ const routes: Routes = [
         (m) => m.AdministradorModule
       ),
   },
+  
   {
     path: 'administrador/flor',
     loadChildren: () =>
       import('./administrador/flor/flor.module').then((m) => m.FlorModule),
   }, 
+  {
+    path: 'administrador/fidelidade',
+    loadChildren: () =>
+      import('./administrador/fidelidade/fidelidade.module').then(
+        (m) => m.FidelidadeModule
+      ),
+  },
+  {
+    path: 'administrador/reclame',
+    loadChildren: () =>
+      import('./administrador/reclame/reclame.module').then(
+        (m) => m.ReclameModule
+      ),
+  },
   {
     path: 'administrador/entregador',
     loadChildren: () =>

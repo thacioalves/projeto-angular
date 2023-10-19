@@ -22,6 +22,7 @@ export class ReclameService {
   save(reclame: Reclame): Observable<Reclame> {
     const obj = {
       idUsuario: reclame.idUsuario,
+      idProduto: reclame.idProduto,
       reclamacao: reclame.reclamacao
     };
     return this.http.post<Reclame>(`${this.baseURL}/reclames`, obj);
@@ -30,6 +31,7 @@ export class ReclameService {
   update(reclame: Reclame): Observable<Reclame> {
     const obj = {
       idUsuario: reclame.idUsuario,
+      idProduto: reclame.idProduto,
       reclamacao: reclame.reclamacao
     };
     return this.http.put<Reclame>(`${this.baseURL}/reclames/${reclame.id}`, obj);

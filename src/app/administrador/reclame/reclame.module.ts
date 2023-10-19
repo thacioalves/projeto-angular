@@ -6,6 +6,20 @@ import { ReclameCreateComponent } from './components/reclame-create/reclame-crea
 import { ReclameUpdateComponent } from './components/reclame-update/reclame-update.component';
 import { ReclameDeleteComponent } from './components/reclame-delete/reclame-delete.component';
 
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
+
+
+import {MatListModule} from '@angular/material/list';
+
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -14,6 +28,14 @@ import { ReclameDeleteComponent } from './components/reclame-delete/reclame-dele
     ReclameDeleteComponent
   ],
   imports: [
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatListModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatDividerModule,
+    MatButtonModule,
     CommonModule,
     ReclameRoutingModule
   ]

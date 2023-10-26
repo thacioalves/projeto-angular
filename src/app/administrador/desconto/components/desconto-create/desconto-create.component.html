@@ -1,1 +1,52 @@
-<p>desconto-create works!</p>
+<div class="centered-toolbar">
+  <p>Cadastro de Desconto</p>
+</div>
+<div class="form-container">
+  <div class="spaceLeft">
+      <mat-card-content>
+          <form [formGroup]="formGroup">
+              <div style="display: flex; flex-direction: column;">
+                  <!-- Valor -->
+                  <div class="containerInput" style="margin-bottom: 30px;">
+                      <mat-label for="desconto_id">Valor</mat-label>
+                      <input matInput type="number" formControlName="desconto" id="desconto_id" />
+                      <mat-error *ngIf="formGroup.get('valor') &&
+                    formGroup.get('valor')?.invalid &&
+                    formGroup.get('valor')?.touched">
+                          Valor é obrigatório
+                      </mat-error>
+                  </div>
+
+                  <mat-divider></mat-divider>
+
+                  <!-- Descrição -->
+                  <div class="containerInput" style="margin-bottom: 30px;">
+                      <mat-label for="desconto_id">Descrição</mat-label>
+                      <input matInput type="text" formControlName="descricao" id="desconto_id" />
+                      <mat-error *ngIf="formGroup.get('descricao') &&
+                    formGroup.get('descricao')?.invalid &&
+                    formGroup.get('descricao')?.touched">
+                          Descrição é obrigatório.
+                      </mat-error>
+                  </div>
+
+                  <mat-divider></mat-divider>
+
+              </div>
+          </form>
+      </mat-card-content>
+
+      <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="salvar()" [disabled]="formGroup.invalid">
+              Salvar
+          </button>
+          <button mat-raised-button *ngIf="formGroup?.get('id')?.value" color="warn" (click)="excluir()"
+              [disabled]="formGroup.invalid">
+              Excluir
+          </button>
+          <button mat-raised-button routerLink="/">
+              Cancelar
+          </button>
+      </mat-card-actions>
+  </div>
+</div>

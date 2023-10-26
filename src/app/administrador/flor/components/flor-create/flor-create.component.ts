@@ -5,7 +5,7 @@ import { Flor } from 'src/app/models/flor';
 import { FornecedorService } from 'src/app/services/fornecedor.service';
 import { FlorService } from 'src/app/services/flor.service';
 import { ViewChild } from '@angular/core';
-
+;
 @Component({
   selector: 'app-flor-create',
   templateUrl: './flor-create.component.html',

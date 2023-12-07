@@ -1,32 +1,21 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
 
+import { EntregadorFormComponent } from './components/entregador-form/entregador-form.component';
+import { EntregadorListComponent } from './components/entregador-list/entregador-list.component';
 import { EntregadorRoutingModule } from './entregador-routing.module';
-import { EntregadorCreateComponent } from './components/entregador-create/entregador-create.component';
-import { EntregadorUpdateComponent } from './components/entregador-update/entregador-update.component';
-import { EntregadorDeleteComponent } from './components/entregador-delete/entregador-delete.component';
-
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
-
-
-import {MatListModule} from '@angular/material/list';
-
-import { ReactiveFormsModule } from '@angular/forms';
-
-
-import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatButtonModule} from '@angular/material/button';
-
-
 
 @NgModule({
-  declarations: [
-    EntregadorCreateComponent,
-    EntregadorUpdateComponent,
-    EntregadorDeleteComponent
+  declarations:[
+    EntregadorListComponent,
+    EntregadorFormComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -38,7 +27,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatFormFieldModule,
     MatInputModule,
     CommonModule,
-    EntregadorRoutingModule
-  ]
+    EntregadorRoutingModule,
+  ],
 })
-export class EntregadorModule { }
+export class EntregadorModule {}

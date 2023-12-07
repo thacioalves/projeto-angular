@@ -1,6 +1,6 @@
 import { Produto } from 'src/app/models/produto';
-export class Estoque{
+export class Estoque {
   id!: number;
   quantidadeProduto!: number;
-  idProduto!: Produto;
+  produto!: Produto;
 }

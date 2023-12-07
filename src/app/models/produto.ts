@@ -1,7 +1,7 @@
-export class Produto{
+export class Produto {
   id!: number;
   nome!: string;
-  valorUnidade!: any;
+  valorUnidade!: number;
   descricao!: string;
-  
+  nomeImagem!: string;
 }

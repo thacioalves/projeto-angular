@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ReclameCreateComponent } from './components/reclame-create/reclame-create.component';
-import { ReclameUpdateComponent } from './components/reclame-update/reclame-update.component';
-import { ReclameDeleteComponent } from './components/reclame-delete/reclame-delete.component';
+import { ReclameListComponent } from './components/reclame-list/reclame-list.component';
+import { ReclameFormComponent } from './components/reclame-form/reclame-form.component';
 
 const routes: Routes = [
-  { path: 'create', component: ReclameCreateComponent },
-  { path: 'update', component: ReclameUpdateComponent },
-  { path: 'delete', component: ReclameDeleteComponent }
+  { path: 'list', component: ReclameListComponent },
+  { path: 'new', component: ReclameFormComponent },
+
 ];
 
 @NgModule({

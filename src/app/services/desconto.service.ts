@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DescontoService {
-  private baseURL: string = 'http://localhost:8080';
+  private baseURL: string = 'http://localhost:8080/descontos';
 
   constructor(private http: HttpClient) {}
 

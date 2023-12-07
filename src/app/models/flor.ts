@@ -1,8 +1,8 @@
-import { Fornecedor } from "./fornecedor";
-import { Produto } from "./produto";
-import { TipoFlor } from "./tipoflor";
+import { Fornecedor } from './fornecedor';
+import { Produto } from './produto';
+import { TipoFlor } from './tipoflor';
 
-export class Flor{
+export class Flor {
   id!: number;
   corPetalas!: string;
   alturaCaule!: number;

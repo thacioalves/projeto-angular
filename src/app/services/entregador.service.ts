@@ -6,7 +6,7 @@ import { Entregador } from '../models/entregador';
 @Injectable({
   providedIn: 'root',
 })
-export class entregadorService {
+export class EntregadorService {
   private baseURL: string = 'http://localhost:8080';           //tem que criar isso no beck
 
   constructor(private http: HttpClient) {}

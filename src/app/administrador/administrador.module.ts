@@ -13,17 +13,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { SharedModule } from '../shared/shared.module';
 import { AdministradorRoutingModule } from './administrador-routing.module';
-import { CadastroComponent } from './components/cadastro/cadastro.component';
-import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
-
 
 @NgModule({
-  declarations: [
-    CadastroComponent,
-    LoginComponent,
-    HomeComponent,
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     AdministradorRoutingModule,

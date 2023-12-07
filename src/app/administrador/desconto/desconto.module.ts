@@ -14,16 +14,14 @@ import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SharedModule } from 'src/app/shared/shared.module';
 
-import { DescontoCreateComponent } from './components/desconto-create/desconto-create.component';
-import { DescontoDeleteComponent } from './components/desconto-delete/desconto-delete.component';
-import { DescontoUpdateComponent } from './components/desconto-update/desconto-update.component';
 import { DescontoRoutingModule } from './desconto-routing.module';
+import { DescontoFormComponent } from './components/desconto-form/desconto-form.component';
+import { DescontoListComponent } from './components/desconto-list/desconto-list.component';
 
 @NgModule({
   declarations: [
-    DescontoCreateComponent,
-    DescontoUpdateComponent,
-    DescontoDeleteComponent,
+    DescontoFormComponent,
+    DescontoListComponent,
   ],
   imports: [
     CommonModule,

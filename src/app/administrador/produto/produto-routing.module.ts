@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProdutoCreateComponent } from './components/produto-create/produto-create.component';
-import { ProdutoUpdateComponent } from './components/produto-update/produto-update.component';
-import { ProdutoDeleteComponent } from './components/produto-delete/produto-delete.component';
+import { ProdutoListComponent } from './components/produto-list/produto-list.component';
+import { ProdutoFormComponent } from './components/produto-form/produto-form.component';
+import { produtoResolver } from './resolver/produto-resolver';
 
 const routes: Routes = [
-  { path: 'create', component: ProdutoCreateComponent },
-  { path: 'update', component: ProdutoUpdateComponent },
-  { path: 'delete', component: ProdutoDeleteComponent },
+  { path: 'list', component: ProdutoListComponent },
+  { path: 'new', component: ProdutoFormComponent },
+  {
+    path: 'edit/:id',
+    component: ProdutoFormComponent,
+    resolve: { produto: produtoResolver },
+  },
+
 ];
 
 @NgModule({

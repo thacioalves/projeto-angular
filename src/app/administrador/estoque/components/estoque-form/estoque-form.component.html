@@ -1,0 +1,55 @@
+<mat-toolbar class="centered-toolbar">Cadastro de Estoques</mat-toolbar>
+<div class="form-container">
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="formGroup">
+        <mat-form-field appearance="outline" class="full-width-input">
+          <mat-label for="quantidadeProduto_id">Quantidade Produto</mat-label>
+          <input
+            matInput
+            type="text"
+            formControlName="quantidadeProduto"
+            id="quantidadeProduto_id"
+          />
+          <mat-error
+            *ngIf="
+              formGroup.get('quantidadeProduto') &&
+              formGroup.get('quantidadeProduto')?.invalid &&
+              formGroup.get('quantidadeProduto')?.touched
+            "
+          >
+            Quantidade do produto é obrigatória.
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label for="produto_id">Produtos</mat-label>
+          <mat-select formControlName="produto" id="produto_id">
+            <mat-option *ngFor="let produto of produtos" [value]="produto">
+              {{ produto.id }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="salvar()"
+        [disabled]="formGroup.invalid"
+      >
+        Salvar
+      </button>
+      <button
+        mat-raised-button
+        *ngIf="formGroup?.get('id')?.value"
+        color="warn"
+        (click)="excluir()"
+        [disabled]="formGroup.invalid"
+      >
+        Excluir
+      </button>
+      <button mat-raised-button routerLink="/estoque/list">Cancelar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

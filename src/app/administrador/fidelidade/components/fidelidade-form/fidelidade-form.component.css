@@ -1,0 +1,96 @@
+
+.quadrado {
+  width: 700px; /* Largura do quadrado */
+  height: 300px; /* Altura do quadrado */
+  padding: 20px; /* Espaçamento interno para melhor aparência */
+  border-radius: 10px; /* Raio de curvatura das bordas para torná-lo um quadrado arredondado */
+}
+
+.button{
+  margin-left: 50%;
+}
+mat-divider{
+  background-color: #414141;
+
+}
+
+/* mat-form-field */
+.full-width-input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+mat-card {
+  max-width: 800px;
+  margin: 2rem auto;
+  /* Centraliza horizontalmente */
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* para a div */
+.form-container {
+  padding: 1rem;
+}
+
+.centered-toolbar {
+  margin-left: 3%;
+  display: flex;
+  font-size: x-large;
+  color: white;
+}
+
+button[mat-raised-button] {
+  width: 120px;
+  /* tamanho do botao */
+}
+
+button[mat-raised-button]:not(:last-child) {
+  margin-right: 1rem;
+  /* Adiciona margem à direita de todos os botões, exceto o último */
+}
+
+mat-label {
+  font-size: 25px;
+  color: white;
+  padding-right: 50px;
+}
+
+mat-divider {
+  background-color: #414141;
+  margin-bottom: 15px;
+}
+
+input {
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #121212;
+  color: white;
+  width: 70%;
+  margin-left: auto;
+}
+
+.spaceLeft {
+  margin-left: 2%;
+}
+
+.containerInput{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.CNPJ{
+  margin-left: 17.5%;
+}
+
+.nomeEntregador{
+  margin-left: 0.5%;
+}
+.IdProduto{
+  margin-left: 10.5%;
+}

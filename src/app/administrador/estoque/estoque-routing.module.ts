@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EstoqueCreateComponent } from './components/estoque-create/estoque-create.component';
-import { EstoqueUpdateComponent } from './components/estoque-update/estoque-update.component';
-import { EstoqueDeleteComponent } from './components/estoque-delete/estoque-delete.component';
+import { EstoqueListComponent } from './components/estoque-list/estoque-list.component';
+import { EstoqueFormComponent } from './components/estoque-form/estoque-form.component';
+import { estoqueResolver } from './resolver/estoque-resolver';
 
 const routes: Routes = [
-  { path: 'create', component: EstoqueCreateComponent },
-  { path: 'update', component: EstoqueUpdateComponent },
-  { path: 'delete', component: EstoqueDeleteComponent },
+  { path: 'list', component: EstoqueListComponent },
+  { path: 'new', component: EstoqueFormComponent },
+  {
+    path: 'edit/:id',
+    component: EstoqueFormComponent,
+    resolve: { estoque: estoqueResolver },
+  },
 ];
 
 @NgModule({

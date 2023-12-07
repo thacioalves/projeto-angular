@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DescontoCreateComponent } from './components/desconto-create/desconto-create.component';
-import { DescontoUpdateComponent } from './components/desconto-update/desconto-update.component';
-import { DescontoDeleteComponent } from './components/desconto-delete/desconto-delete.component';
+import { DescontoListComponent } from './components/desconto-list/desconto-list.component';
+import { DescontoFormComponent } from './components/desconto-form/desconto-form.component';
+
 
 const routes: Routes = [
-  { path: 'create', component: DescontoCreateComponent },
-  { path: 'update', component: DescontoUpdateComponent },
-  { path: 'delete', component: DescontoDeleteComponent },
+  { path: 'list', component: DescontoListComponent },
+  { path: 'new', component: DescontoFormComponent },
 ];
 
 @NgModule({

@@ -16,13 +16,17 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SharedRoutingModule } from './shared-routing.module';
-
+import { UserTemplateComponent } from './components/user-template/user-template.component';
+import { AdminTemplateComponent } from './components/admin-template/admin-template.component';
+import { AuthModule } from '../auth/auth.module';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
+    UserTemplateComponent,
+    AdminTemplateComponent,
   ],
   imports: [
     CommonModule,
@@ -37,12 +41,9 @@ import { SharedRoutingModule } from './shared-routing.module';
     MatToolbarModule,
     MatDividerModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    AuthModule,
   ],
-  exports: [
-    HeaderComponent,
-    SidebarComponent,
-    FooterComponent
-  ]
+  exports: [HeaderComponent, SidebarComponent, FooterComponent],
 })
-export class SharedModule { }
+export class SharedModule {}

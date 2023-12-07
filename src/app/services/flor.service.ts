@@ -7,30 +7,40 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class FlorService {
-  private baseURL: string = 'http://localhost:8080';
+  private baseURL: string = 'http://localhost:8080/flores';
 
   constructor(private http: HttpClient) {}
 
-  findAll(): Observable<Flor[]> {
-    return this.http.get<Flor[]>(`${this.baseURL}/flores`);
+  findAll(pagina: number, tamanhoPagina: number): Observable<Flor[]> {
+    const params = {
+      page: pagina.toString(),
+      pageSize: tamanhoPagina.toString(),
+    };
+    return this.http.get<Flor[]>(`${this.baseURL}/flores`, { params });
   }
 
   findById(id: string): Observable<Flor> {
     return this.http.get<Flor>(`${this.baseURL}/flores/${id}`);
   }
 
-  findByNome(nome: string, pagina: number, tamanhoPagina: number): Observable<Flor[]> {
+  findByNome(
+    nome: string,
+    pagina: number,
+    tamanhoPagina: number
+  ): Observable<Flor[]> {
     const params = {
       page: pagina.toString(),
-      pageSize: tamanhoPagina.toString()
-    }
-    return this.http.get<Flor[]>(`${this.baseURL}/flores/search/${nome}`, {params});
+      pageSize: tamanhoPagina.toString(),
+    };
+    return this.http.get<Flor[]>(`${this.baseURL}/flores/search/${nome}`, {
+      params,
+    });
   }
 
   save(flor: Flor): Observable<Flor> {
     const obj = {
       corPetalas: flor.corPetalas,
-      alturaCaule: flor.alturaCaule
+      alturaCaule: flor.alturaCaule,
     };
     return this.http.post<Flor>(`${this.baseURL}/flores`, obj);
   }
@@ -38,9 +48,9 @@ export class FlorService {
   update(flor: Flor): Observable<Flor> {
     const obj = {
       corPetalas: flor.corPetalas,
-      alturaCaule: flor.alturaCaule
+      alturaCaule: flor.alturaCaule,
     };
-    return this.http.put<Flor>(`${this.baseURL}/flores/${flor.id}`, obj);
+    return this.http.post<Flor>(`${this.baseURL}/flores`, obj);
   }
 
   delete(flor: Flor): Observable<any> {
@@ -54,5 +64,4 @@ export class FlorService {
   countByNome(nome: string): Observable<number> {
     return this.http.get<number>(`${this.baseURL}/flores/search/${nome}/count`);
   }
-
 }

@@ -7,12 +7,30 @@ import { Estoque } from '../models/estoque';
   providedIn: 'root',
 })
 export class EstoqueService {
-  private baseURL: string = 'http://localhost:8080';
+  private baseURL: string = 'http://localhost:8080/estoques';
 
   constructor(private http: HttpClient) {}
 
-  findAll(): Observable<Estoque[]> {
-    return this.http.get<Estoque[]>(`${this.baseURL}/estoques`);
+  findAll(pagina: number, tamanhoPagina: number): Observable<Estoque[]> {
+    const params = {
+      page: pagina.toString(),
+      pageSize: tamanhoPagina.toString(),
+    };
+    return this.http.get<Estoque[]>(`${this.baseURL}/estoques`, { params });
+  }
+
+  findByNome(
+    nome: string,
+    pagina: number,
+    tamanhoPagina: number
+  ): Observable<Estoque[]> {
+    const params = {
+      page: pagina.toString(),
+      pageSize: tamanhoPagina.toString(),
+    };
+    return this.http.get<Estoque[]>(`${this.baseURL}/estoques/search/${nome}`, {
+      params,
+    });
   }
 
   findById(id: string): Observable<Estoque> {
@@ -22,23 +40,28 @@ export class EstoqueService {
   save(estoque: Estoque): Observable<Estoque> {
     const obj = {
       quantidadeProduto: estoque.quantidadeProduto,
-      produto: estoque.idProduto,
+      produto: estoque.produto,
     };
-    return this.http.post<Estoque>(`${this.baseURL}/estoques`, obj);
+    return this.http.post<Estoque>(`${this.baseURL}/estoques`, estoque);
   }
 
   update(estoque: Estoque): Observable<Estoque> {
-    const obj = {
-      quantidadeProduto: estoque.quantidadeProduto,
-      produto: estoque.idProduto,
-    };
     return this.http.put<Estoque>(
       `${this.baseURL}/estoques/${estoque.id}`,
-      obj
+      estoque
     );
   }
 
   delete(estoque: Estoque): Observable<any> {
     return this.http.delete<Estoque>(`${this.baseURL}/estoques/${estoque.id}`);
+  }
+  count(): Observable<number> {
+    return this.http.get<number>(`${this.baseURL}/estoques/count`);
+  }
+
+  countByNome(nome: string): Observable<number> {
+    return this.http.get<number>(
+      `${this.baseURL}/estoques/search/${nome}/count`
+    );
   }
 }

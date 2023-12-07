@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UsuarioCreateComponent } from './components/usuario-create/usuario-create.component';
-import { UsuarioUpdateComponent } from './components/usuario-update/usuario-update.component';
-import { UsuarioDeleteComponent } from './components/usuario-delete/usuario-delete.component';
+import { UsuarioListComponent } from './components/usuario-list/usuario-list.component';
+import { UsuarioFormComponent } from './components/usuario-form/usuario-form.component';
+import { usuarioResolver } from './resolver/usuario-resolver';
 
 const routes: Routes = [
-  { path: 'create', component: UsuarioCreateComponent },
-  { path: 'update', component: UsuarioUpdateComponent },
-  { path: 'create', component: UsuarioDeleteComponent },
+  { path: 'list', component: UsuarioListComponent },
+  { path: 'new', component: UsuarioFormComponent },
+  {
+    path: 'edit/:id',
+    component: UsuarioFormComponent,
+    resolve: { usuario: usuarioResolver },
+  },
 ];
 
 @NgModule({

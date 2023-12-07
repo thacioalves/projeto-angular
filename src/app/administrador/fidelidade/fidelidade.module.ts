@@ -1,31 +1,21 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
 
+import { FidelidadeFormComponent } from './components/fidelidade-form/fidelidade-form.component';
+import { FidelidadeListComponent } from './components/fidelidade-list/fidelidade-list.component';
 import { FidelidadeRoutingModule } from './fidelidade-routing.module';
-import { FidelidadeCreateComponent } from './components/fidelidade-create/fidelidade-create.component';
-import { FidelidadeUpdateComponent } from './components/fidelidade-update/fidelidade-update.component';
-import { FidelidadeDeleteComponent } from './components/fidelidade-delete/fidelidade-delete.component';
-
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
-
-
-import {MatListModule} from '@angular/material/list';
-
-import { ReactiveFormsModule } from '@angular/forms';
-
-
-import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatButtonModule} from '@angular/material/button';
-
 
 @NgModule({
   declarations: [
-    FidelidadeCreateComponent,
-    FidelidadeUpdateComponent,
-    FidelidadeDeleteComponent
+    FidelidadeListComponent,
+    FidelidadeFormComponent
   ],
   imports: [
     MatInputModule,
@@ -37,7 +27,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     MatButtonModule,
     CommonModule,
-    FidelidadeRoutingModule
-  ]
+    FidelidadeRoutingModule,
+  ],
 })
-export class FidelidadeModule { }
+export class FidelidadeModule {}

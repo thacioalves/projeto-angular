@@ -5,18 +5,9 @@
       <form [formGroup]="formGroup">
         <mat-form-field appearance="outline" class="full-width-input">
           <mat-label>Nome</mat-label>
-          <input matInput type="text" formControlName="nome" />
+          <input matInput type="text" formControlName="nome" #inputNome />
           <mat-error *ngIf="formGroup.get('nome')?.hasError('apiError')">
             {{ formGroup.get("nome")?.getError("apiError") }}
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="full-width-input">
-          <mat-label>Valor Unidade</mat-label>
-          <input matInput type="text" formControlName="valorUnidade" />
-          <mat-error
-            *ngIf="formGroup.get('valorUnidade')?.hasError('apiError')"
-          >
-            {{ formGroup.get("valorUnidade")?.getError("apiError") }}
           </mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline" class="full-width-input">
@@ -26,6 +17,62 @@
             {{ formGroup.get("descricao")?.getError("apiError") }}
           </mat-error>
         </mat-form-field>
+        <mat-form-field appearance="outline" class="full-width-input">
+          <mat-label>Valor Unidade</mat-label>
+          <input
+            matInput
+            type="text"
+            formControlName="valorUnidade"
+            #inputValor
+          />
+          <mat-error
+            *ngIf="formGroup.get('valorUnidade')?.hasError('apiError')"
+          >
+            {{ formGroup.get("valorUnidade")?.getError("apiError") }}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="full-width-input">
+          <mat-label>Imagem do produto</mat-label>
+          <input
+            type="file"
+            (change)="carregarImagemSelecionada($event)"
+            hidden
+            #fileInput
+          />
+          <input matInput [value]="fileName" readonly />
+
+          <button mat-icon-button matSuffix (click)="fileInput.click()">
+            <mat-icon>folder_open</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <div *ngIf="imagePreview" class="container responsive-grid">
+          <mat-card>
+            <img mat-card-image [src]="imagePreview" />
+
+            <mat-card-title class="centered-text">
+              {{ inputNome.value }}
+            </mat-card-title>
+            <br />
+            <mat-card-content class="centered-text">
+              {{ inputValor.value | currency : "BRL" }}
+            </mat-card-content>
+
+            <mat-card-actions class="centered-text">
+              <button mat-button color="primary">Ver mais ...</button>
+            </mat-card-actions>
+
+            <mat-card-footer>
+              <button
+                mat-flat-button
+                color="accent"
+                style="width: 100%; padding: 16px"
+              >
+                Adicionar ao carrinho
+              </button>
+            </mat-card-footer>
+          </mat-card>
+        </div>
       </form>
     </mat-card-content>
     <mat-card-actions>
@@ -46,9 +93,7 @@
       >
         Excluir
       </button>
-      <button mat-raised-button routerLink="administrador/produto/list">
-        Cancelar
-      </button>
+      <button mat-raised-button routerLink="/produto/list">Cancelar</button>
     </mat-card-actions>
   </mat-card>
 </div>

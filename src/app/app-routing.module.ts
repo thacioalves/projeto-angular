@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/components/login/login.component';
 import { AdminTemplateComponent } from './shared/components/admin-template/admin-template.component';
 import { UserTemplateComponent } from './shared/components/user-template/user-template.component';
+import { CarrinhoComponent } from './compra/components/carrinho/carrinho.component';
 
 const routes: Routes = [
   {
@@ -44,17 +45,27 @@ const routes: Routes = [
       },
     ],
   },
+
   {
     path: 'user',
     component: UserTemplateComponent,
     children: [
-      { path: 'login', component: LoginComponent },
+      // { path: 'login', component: LoginComponent },
+      {
+        path: 'auth',
+        loadChildren: () =>
+          import('./auth/auth.module').then((m) => m.AuthModule),
+      },
+      {
+        path: 'compras',
+        loadChildren: () =>
+          import('./compra/compra.module').then((m) => m.CompraModule),
+      },
       // { path: 'register', component: RegisterComponent },
-      //  { path: 'carrinho', component: CarrinhoComponent },
     ],
   },
   { path: '', redirectTo: '/user', pathMatch: 'full' }, // Rota padrão
-  { path: '**', redirectTo: '/user' }, // Rota para tratamento de erro
+  { path: '**', redirectTo: '/user' }, // Rota para tratamento de erro
 ];
 
 @NgModule({

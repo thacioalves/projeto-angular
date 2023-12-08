@@ -13,13 +13,18 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { ProdutoCardListComponent } from 'src/app/compra/components/produto-card-list/produto-card-list.component';
 
 import { ProdutoFormComponent } from './components/produto-form/produto-form.component';
 import { ProdutoListComponent } from './components/produto-list/produto-list.component';
 import { ProdutoRoutingModule } from './produto-routing.module';
 
 @NgModule({
-  declarations: [ProdutoFormComponent, ProdutoListComponent],
+  declarations: [
+    ProdutoFormComponent,
+    ProdutoListComponent,
+    ProdutoCardListComponent,
+  ],
   imports: [
     CommonModule,
     ProdutoRoutingModule,

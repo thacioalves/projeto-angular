@@ -14,6 +14,7 @@ export class ProdutoListComponent implements OnInit {
     'nome-column',
     'valorUnidade-column',
     'descricao-column',
+    'acao-column'
   ];
   produtos: Produto[] = [];
   totalRegistros = 0;

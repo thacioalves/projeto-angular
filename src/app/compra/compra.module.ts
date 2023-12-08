@@ -6,11 +6,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 
 import { CarrinhoComponent } from './components/carrinho/carrinho.component';
-import { ProdutoCardListComponent } from './components/produto-card-list/produto-card-list.component';
 import { CompraRoutingModule } from './compra-routing.module';
 
 @NgModule({
-  declarations: [CarrinhoComponent, ProdutoCardListComponent],
+  declarations: [CarrinhoComponent],
   imports: [
     CommonModule,
     CompraRoutingModule,

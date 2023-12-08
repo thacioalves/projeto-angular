@@ -18,7 +18,6 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SharedRoutingModule } from './shared-routing.module';
 import { UserTemplateComponent } from './components/user-template/user-template.component';
 import { AdminTemplateComponent } from './components/admin-template/admin-template.component';
-import { AuthModule } from '../auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -42,7 +41,6 @@ import { AuthModule } from '../auth/auth.module';
     MatDividerModule,
     MatListModule,
     MatSidenavModule,
-    AuthModule,
   ],
   exports: [HeaderComponent, SidebarComponent, FooterComponent],
 })

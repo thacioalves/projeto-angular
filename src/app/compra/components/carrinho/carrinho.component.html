@@ -2,9 +2,9 @@
   <div *ngFor="let item of carrinhoItens" class="carrinho-item">
     <!-- <img [src]="item.imageUrl" alt="{{ item.nome }}"> -->
     <h3>{{ item.nome }}</h3>
-    <p>Preço: {{ item.preco }}</p>
+    <p>Valor Unidade: {{ item.valorUnidade }}</p>
     <p>Quantidade: {{ item.quantidade }}</p>
-    <p>Total: {{ item.quantidade * item.preco }}</p>
+    <p>Total: {{ item.quantidade * item.valorUnidade }}</p>
     <button mat-raised-button color="warn" (click)="removerItem(item)">
       Remover do Carrinho
     </button>

@@ -15,6 +15,7 @@ export class FornecedorListComponent implements OnInit {
     'pais-column',
     'safra-column',
     'volume-column',
+    'acao-column'
   ];
   fornecedores: Fornecedor[] = [];
   totalRegistros = 0;

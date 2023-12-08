@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {
   CarrinhoService,
   ItemCarrinho,
 } from 'src/app/services/carrinho.service';
+import { PedidoService } from 'src/app/services/pedido.service';
 
 @Component({
   selector: 'app-carrinho',
@@ -12,7 +14,11 @@ import {
 export class CarrinhoComponent implements OnInit {
   carrinhoItens: ItemCarrinho[] = [];
 
-  constructor(private carrinhoService: CarrinhoService) {}
+  constructor(
+    private carrinhoService: CarrinhoService,
+    private router: Router,
+    private pedidoService: PedidoService
+  ) {}
 
   ngOnInit(): void {
     this.carrinhoService.carrinho$.subscribe((itens) => {
@@ -29,5 +35,17 @@ export class CarrinhoComponent implements OnInit {
       (total, item) => total + item.quantidade * item.valorUnidade,
       0
     );
+  }
+
+  finalizarCompra() {
+    this.pedidoService.save(this.carrinhoItens).subscribe({
+      next: () => {
+        this.carrinhoService.removerTudo();
+        this.router.navigateByUrl('/user/compras/produtos');
+      },
+      error: (err) => {
+        console.log('Erro ao incluir' + JSON.stringify(err));
+      },
+    });
   }
 }
